@@ -1,0 +1,116 @@
+2021-10-16 17:31:14,824 - INFO - root - Connecting to the PostgreSQL database...
+2021-10-16 17:31:14,878 - INFO - root - Connection successful
+2021-10-16 17:31:14,879 - INFO - root - Getting offers in Dusseldorf...
+2021-10-16 17:31:15,062 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:16,281 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=100207&marketingtype=2&page=1 HTTP/1.1" 200 30258
+2021-10-16 17:31:16,412 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:17,407 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=100207&marketingtype=2&page=1 HTTP/1.1" 200 28926
+2021-10-16 17:31:17,548 - INFO - root - Getting offers in Berlin...
+2021-10-16 17:31:17,550 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:18,534 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=87372&marketingtype=2&page=1 HTTP/1.1" 200 32094
+2021-10-16 17:31:18,707 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:19,809 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=87372&marketingtype=2&page=1 HTTP/1.1" 200 32447
+2021-10-16 17:31:19,939 - INFO - root - Getting offers in Essen...
+2021-10-16 17:31:19,941 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:21,053 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=102157&marketingtype=2&page=1 HTTP/1.1" 200 30253
+2021-10-16 17:31:21,211 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:22,322 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=102157&marketingtype=2&page=1 HTTP/1.1" 200 29132
+2021-10-16 17:31:22,444 - INFO - root - Getting offers in Munchen...
+2021-10-16 17:31:22,447 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:23,962 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=121673&marketingtype=2&page=1 HTTP/1.1" 200 29737
+2021-10-16 17:31:24,090 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:25,067 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=121673&marketingtype=2&page=1 HTTP/1.1" 200 28427
+2021-10-16 17:31:25,237 - INFO - root - Getting offers in Koln...
+2021-10-16 17:31:25,240 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:26,319 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=113144&marketingtype=2&page=1 HTTP/1.1" 200 30388
+2021-10-16 17:31:26,444 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:27,883 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=113144&marketingtype=2&page=1 HTTP/1.1" 200 29898
+2021-10-16 17:31:28,036 - INFO - root - Getting offers in Stuttgart...
+2021-10-16 17:31:28,039 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:29,175 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=143262&marketingtype=2&page=1 HTTP/1.1" 200 29646
+2021-10-16 17:31:29,320 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:30,298 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=143262&marketingtype=2&page=1 HTTP/1.1" 200 28413
+2021-10-16 17:31:30,435 - INFO - root - Getting offers in Dresden...
+2021-10-16 17:31:30,437 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:31,438 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=100051&marketingtype=2&page=1 HTTP/1.1" 200 32625
+2021-10-16 17:31:31,597 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:32,478 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=100051&marketingtype=2&page=1 HTTP/1.1" 200 30853
+2021-10-16 17:31:32,617 - INFO - root - Getting offers in Hannover...
+2021-10-16 17:31:32,619 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:33,587 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=109489&marketingtype=2&page=1 HTTP/1.1" 200 29431
+2021-10-16 17:31:33,708 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:34,919 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=109489&marketingtype=2&page=1 HTTP/1.1" 200 28645
+2021-10-16 17:31:35,039 - INFO - root - Getting offers in Dortmund...
+2021-10-16 17:31:35,041 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:36,147 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=99990&marketingtype=2&page=1 HTTP/1.1" 200 30536
+2021-10-16 17:31:36,279 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:37,478 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=99990&marketingtype=2&page=1 HTTP/1.1" 200 29850
+2021-10-16 17:31:37,625 - INFO - root - Getting offers in Frankfurt am Main...
+2021-10-16 17:31:37,627 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:38,608 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=105043&marketingtype=2&page=1 HTTP/1.1" 200 28077
+2021-10-16 17:31:38,730 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:39,950 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=105043&marketingtype=2&page=1 HTTP/1.1" 200 29527
+2021-10-16 17:31:40,090 - INFO - root - Getting offers in Hamburg...
+2021-10-16 17:31:40,093 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:41,269 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=109447&marketingtype=2&page=1 HTTP/1.1" 200 31656
+2021-10-16 17:31:41,404 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:31:42,494 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=109447&marketingtype=2&page=1 HTTP/1.1" 200 31622
+2021-10-16 17:31:42,657 - INFO - root - offers_qtt_by_city uptodate.
+2021-10-16 17:42:51 - INFO - get_offers_by_city - Connecting to the PostgreSQL database...
+2021-10-16 17:42:51 - INFO - get_offers_by_city - Connection successful
+2021-10-16 17:42:51 - INFO - get_offers_by_city - Getting offers in Dusseldorf...
+2021-10-16 17:42:51 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:42:52 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=100207&marketingtype=2&page=1 HTTP/1.1" 200 30258
+2021-10-16 17:42:52 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:42:53 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=100207&marketingtype=2&page=1 HTTP/1.1" 200 28926
+2021-10-16 17:42:53 - INFO - get_offers_by_city - Getting offers in Berlin...
+2021-10-16 17:42:53 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:42:54 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=87372&marketingtype=2&page=1 HTTP/1.1" 200 32094
+2021-10-16 17:42:54 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:42:55 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=87372&marketingtype=2&page=1 HTTP/1.1" 200 32446
+2021-10-16 17:42:56 - INFO - get_offers_by_city - Getting offers in Essen...
+2021-10-16 17:42:56 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:42:57 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=102157&marketingtype=2&page=1 HTTP/1.1" 200 30253
+2021-10-16 17:42:57 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:42:58 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=102157&marketingtype=2&page=1 HTTP/1.1" 200 29132
+2021-10-16 17:42:58 - INFO - get_offers_by_city - Getting offers in Munchen...
+2021-10-16 17:42:58 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:42:59 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=121673&marketingtype=2&page=1 HTTP/1.1" 200 29736
+2021-10-16 17:42:59 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:00 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=121673&marketingtype=2&page=1 HTTP/1.1" 200 28426
+2021-10-16 17:43:00 - INFO - get_offers_by_city - Getting offers in Koln...
+2021-10-16 17:43:00 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:01 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=113144&marketingtype=2&page=1 HTTP/1.1" 200 30388
+2021-10-16 17:43:02 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:03 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=113144&marketingtype=2&page=1 HTTP/1.1" 200 29897
+2021-10-16 17:43:03 - INFO - get_offers_by_city - Getting offers in Stuttgart...
+2021-10-16 17:43:03 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:04 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=143262&marketingtype=2&page=1 HTTP/1.1" 200 29646
+2021-10-16 17:43:04 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:05 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=143262&marketingtype=2&page=1 HTTP/1.1" 200 28413
+2021-10-16 17:43:05 - INFO - get_offers_by_city - Getting offers in Dresden...
+2021-10-16 17:43:05 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:07 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=100051&marketingtype=2&page=1 HTTP/1.1" 200 32625
+2021-10-16 17:43:07 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:08 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=100051&marketingtype=2&page=1 HTTP/1.1" 200 30854
+2021-10-16 17:43:08 - INFO - get_offers_by_city - Getting offers in Hannover...
+2021-10-16 17:43:08 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:09 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=109489&marketingtype=2&page=1 HTTP/1.1" 200 29431
+2021-10-16 17:43:09 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:10 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=109489&marketingtype=2&page=1 HTTP/1.1" 200 28646
+2021-10-16 17:43:10 - INFO - get_offers_by_city - Getting offers in Dortmund...
+2021-10-16 17:43:10 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:11 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=99990&marketingtype=2&page=1 HTTP/1.1" 200 30536
+2021-10-16 17:43:11 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:12 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=99990&marketingtype=2&page=1 HTTP/1.1" 200 29850
+2021-10-16 17:43:12 - INFO - get_offers_by_city - Getting offers in Frankfurt am Main...
+2021-10-16 17:43:12 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:13 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=105043&marketingtype=2&page=1 HTTP/1.1" 200 28078
+2021-10-16 17:43:13 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:15 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=105043&marketingtype=2&page=1 HTTP/1.1" 200 29527
+2021-10-16 17:43:15 - INFO - get_offers_by_city - Getting offers in Hamburg...
+2021-10-16 17:43:15 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:16 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=1&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=109447&marketingtype=2&page=1 HTTP/1.1" 200 31657
+2021-10-16 17:43:16 - DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.immonet.de:443
+2021-10-16 17:43:17 - DEBUG - urllib3.connectionpool - https://www.immonet.de:443 "GET /immobiliensuche/sel.do?parentcat=2&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city=109447&marketingtype=2&page=1 HTTP/1.1" 200 31622
+2021-10-16 17:43:17 - INFO - get_offers_by_city - offers_qtt_by_city uptodate.

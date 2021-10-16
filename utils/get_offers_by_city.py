@@ -1,10 +1,23 @@
+'''Get quantity of rent offers by city
+
+This script gets the quantity off all rent offers from each default city
+and saves it in a postgres database, into the "offers_qtt_by_city" table,
+to further use.
+
+The "offers_qtt_by_city" table is appended with the new information to
+historical record.
+
+'''
+
 import os
 import re
 import math
 import requests
 import psycopg2
+import logging
 import numpy as np
 import pandas as pd
+import psycopg2.extras as extras
 
 from time import sleep
 from random import randint
@@ -13,7 +26,40 @@ from datetime import datetime
 from sqlalchemy import create_engine
 from config import config
 
-# get main German cities codes
+if not os.path.exists('Logs'):
+    os.makedirs('Logs')
+
+logging.basicConfig(
+    filename='Logs/get_offers_by_cuty.txt', 
+    format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S',
+    level=logging.DEBUG
+)
+
+logger = logging.getLogger('get_offers_by_city')
+
+def connect(conf):
+    """ 
+    Connect to the PostgreSQL database server 
+    
+    Parameters:
+    ----------
+        conf: configuration for connection
+    """
+    conn = None
+    try:
+        # connect to the PostgreSQL server
+        logger.info('Connecting to the PostgreSQL database...')
+        print('Connecting to the PostgreSQL database...')
+        conn = psycopg2.connect(**conf)
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error('Connection to database failed')
+        print(error)
+        sys.exit(1)
+    logger.info("Connection successful")    
+    print("Connection successful")
+    
+    return conn
 
 def get_offers_qtt():
     '''
@@ -40,6 +86,8 @@ def get_offers_qtt():
     cities_offers = []
 
     for city, code in cities_dict.items():
+        logger.info(f'Getting offers in {city}...')
+        print(f'Getting offers in {city}...')
 
         total_offers = 0
 
@@ -57,28 +105,48 @@ def get_offers_qtt():
 
     # offers_by_page = len(soup.findAll('div', class_="col-xs-12 place-over-understitial sel-bg-gray-lighter"))    
     df_offers = pd.DataFrame(cities_offers)
-    #df_offers.to_csv(f'../data/total_offers_by_city_{now2}.csv', index=False)
+    #df_offers.to_csv(f'temp_data/total_offers_by_city_temp_file.csv', index=False)
     
     return df_offers
 
 
-def connect():
-    """ 
-    Connect to the PostgreSQL database server 
-    """
-    conn = None
-    try:
-        # connect to the PostgreSQL server
-        print('Connecting to the PostgreSQL database...')
-        conn = psycopg2.connect(**config())
-    except (Exception, psycopg2.DatabaseError) as error:
-        print(error)
-        sys.exit(1)
-    print("Connection successful")
+def load_results(conn, df, table_name):
+    """Get the extracted data and insert into a postgres table.
     
-    return conn
-
-
+    Parameters:
+    -----------
+        conn: connection to the database.
+        df: Dataframe to insert into the database.
+        table_name: table to insert the dataframe. 
+    """
+    # Create a list of tupples from the dataframe values
+    tuples = [tuple(x) for x in df.to_numpy()]
+    # Comma-separated dataframe columns
+    cols = ','.join(list(df.columns))
+    # SQL quert to execute
+    query  = "INSERT INTO %s(%s) VALUES %%s" % (table_name, cols)
+    cursor = conn.cursor()
+    try:
+        extras.execute_values(cursor, query, tuples)
+        conn.commit()
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(f"Error: {error}")
+        print(f"Error: {error}")
+        conn.rollback()
+        cursor.close()
+        return 1
+    logger.info(f"{table_name} uptodate.")
+    print(f"{table_name} uptodate.")
+    cursor.close()
+    
+def main():
+    conn = connect(conf=config())
+    df = get_offers_qtt()
+    load_results(conn, df, table_name='offers_qtt_by_city')
+    conn.close()
+    
+if __name__ == '__main__':
+    main()
 
     
     
