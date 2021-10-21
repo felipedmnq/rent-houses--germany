@@ -11,6 +11,7 @@ historical record.
 
 import os
 import re
+import sys
 import math
 import requests
 import psycopg2
@@ -49,8 +50,8 @@ def connect(conf):
     conn = None
     try:
         # connect to the PostgreSQL server
-        logger.info('Connecting to the PostgreSQL database...')
-        print('Connecting to the PostgreSQL database...')
+        logger.info('Connecting to database...')
+        print('Connecting to database...')
         conn = psycopg2.connect(**conf)
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error('Connection to database failed')
