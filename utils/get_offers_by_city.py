@@ -20,6 +20,7 @@ import numpy as np
 import pandas as pd
 import psycopg2.extras as extras
 
+from tqdm import tqdm
 from time import sleep
 from random import randint
 from bs4 import BeautifulSoup
@@ -85,24 +86,26 @@ def get_offers_qtt():
     # get all offers quantity - haus und wohnung
 
     cities_offers = []
+    
+    with tqdm(total=len(cities_dict)) as pbar:
+        for city, code in cities_dict.items():
+            logger.info(f'Getting offers in {city}...')
+            print(f'Getting offers in {city}...')
 
-    for city, code in cities_dict.items():
-        logger.info(f'Getting offers in {city}...')
-        print(f'Getting offers in {city}...')
+            total_offers = 0
 
-        total_offers = 0
+            for i in range(1,3):
+                url = f'https://www.immonet.de/immobiliensuche/sel.do?parentcat={i}&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city={code}&marketingtype=2&page=1'
+                headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+                page = requests.get(url, headers=headers)
+                soup = BeautifulSoup(page.text, "html.parser")
 
-        for i in range(1,3):
-            url = f'https://www.immonet.de/immobiliensuche/sel.do?parentcat={i}&objecttype=1&pageoffset=378&listsize=27&suchart=1&sortby=0&city={code}&marketingtype=2&page=1'
-            headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
-            page = requests.get(url, headers=headers)
-            soup = BeautifulSoup(page.text, "html.parser")
+                # Find number of rent offers.
+                a = soup.findAll('h1', class_='box-50')[0].get_text()
+                total_offers += int(re.search('\d+', a).group())
 
-            # Find number of rent offers.
-            a = soup.findAll('h1', class_='box-50')[0].get_text()
-            total_offers += int(re.search('\d+', a).group())
-
-        cities_offers.append({'extraction_datetime': now, 'city': city, 'city_code': code, 'offers': total_offers})
+            cities_offers.append({'extraction_datetime': now, 'city': city, 'city_code': code, 'offers': total_offers})
+        pbar.update(5)
 
     # offers_by_page = len(soup.findAll('div', class_="col-xs-12 place-over-understitial sel-bg-gray-lighter"))    
     df_offers = pd.DataFrame(cities_offers)

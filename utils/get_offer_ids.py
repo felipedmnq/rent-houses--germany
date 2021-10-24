@@ -1,3 +1,11 @@
+'''Get the ids from all rent offers in all determinated cities.
+
+This script gets all the ids from all rent offers in all the predeterminated cities
+and save it in a database table named "all_offer_ids" to further use.
+
+The previous table is dropped and a new table is created each time that it runs.
+'''
+
 import os
 import re
 import sys
@@ -108,7 +116,7 @@ def get_offer_ids(df, save=False):
                 soup = BeautifulSoup(page.text, "html.parser")
 
                 offers_list_1page = soup.findAll('div', class_="col-xs-12 place-over-understitial sel-bg-gray-lighter")
-
+                
                 for i in range(len(offers_list_1page)):
                     try:
                         if opt == 1:
@@ -189,6 +197,8 @@ def load_offer_ids(df_ids, conn):
     logger.info(f"{table_name} uptodate.")
     print(f"{table_name} uptodate.")
     cursor.close()
+    
+    return None
     
 def main():
     # connection to database
