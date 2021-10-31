@@ -98,13 +98,29 @@ def get_offers_infos(df_ids, save=False):
             page = requests.get(url, headers=headers)
             soup = BeautifulSoup(page.text, "html.parser")
 
-            panels_infos = soup.findAll('div', class_='row box-50')
+            #panels_infos = soup.findAll('div', class_='row box-50')
             # get all infos about each offer (all infos are mixed)
 
-            offer_infos = []
-            for panel in panels_infos:
-                text = panel.text.replace('\n', '').replace('\t', '-')
-                offer_infos.append(text)
+            # get all infos in almost a json format
+            script_infos = soup.select('script', type_='text/javascript')
+            
+            for i in script_infos:
+                if 'targetingParams' in i.text:
+                    c = i.text
+                    infos = re.findall('\{(.*?)\}', c)
+                
+                # get lat/lng
+                if 'initModalMap' in i.text:
+                    try:
+                        c = i.text.replace('\n', '').replace('\t', '')
+                        lat_lng = re.findall('\{lat: \d+.\d+,lng: \d+.\d+}', c)
+                    except:
+                        lat_lng = np.nan
+                        
+            #offer_infos = []
+            #for panel in panels_infos:
+            #    text = panel.text.replace('\n', '').replace('\t', '-')
+            #    offer_infos.append(text)
 
 
 
@@ -113,7 +129,8 @@ def get_offers_infos(df_ids, save=False):
                                'city': df_ids['city'][count],
                                'city_code': df_ids['city_code'][count],
                                'offer_type': df_ids['type'][count],
-                               'offer_infos': offer_infos})
+                               'lat_lng': lat_lng,
+                               'offer_infos': infos})
             sleep(1)
             pbar.update(1)
             #print(count)
@@ -164,6 +181,7 @@ def load_offer_ids(df_infos, conn):
         city VARCHAR(50),
         city_code INTEGER,
         offer_type VARCHAR(50),
+        lat_lng TEXT,
         offer_infos TEXT
     )'''
     try:
