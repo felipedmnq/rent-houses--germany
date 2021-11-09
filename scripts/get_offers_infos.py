@@ -61,7 +61,7 @@ def get_data_from_db(conn):
     
     # get infos from the database
     query = '''
-        SELECT * FROM all_offer_ids
+        SELECT * FROM all_ids
     '''
     
     cursor.execute(query)

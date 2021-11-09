@@ -145,7 +145,7 @@ def get_offer_ids(df, save=False):
     return df_ids
 
 def load_offer_ids(df_ids, conn):
-    table_name = 'all_offer_ids'
+    table_name = 'all_ids'
     # delete table 
     query1 = f'DROP TABLE IF EXISTS {table_name}'
     cursor = conn.cursor()
