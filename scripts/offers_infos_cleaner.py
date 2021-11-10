@@ -60,7 +60,7 @@ def get_data_from_db(conn):
     return df_raw
 
 
-def offers_infos_cleaning(df_raw):
+def offers_infos_cleaning(df_raw, save=True):
     '''Clean and separate meaningful infos
     
     Parameter:
@@ -231,6 +231,13 @@ def offers_infos_cleaning(df_raw):
         
     # create a new cleaned dataframe
     df_cleaned = pd.DataFrame(df_list)
+    
+    if save:
+        if not os.path.exists('../data'):
+            os.makedirs('../data')
+        output_dir = '../data/'
+        filename = f'all_offers_infos_pp.csv'
+        df_cleaned.to_csv(os.path.join(output_dir, filename), index=False)
 
     return df_cleaned
 
@@ -314,13 +321,15 @@ def load_df_cleaned(df_cleaned, conn):
 
 def main():
     # connection to database
-    conn = connect(config())
+    #conn = connect(config())
     
-    df_raw = get_data_from_db(conn)
-    df_cleaned = offers_infos_cleaning(df_raw)
-    load_df_cleaned(df_cleaned, conn)
+    #df_raw = get_data_from_db(conn)
+    df_raw = pd.read_csv('../data/all_offers_infos_raw.csv')
+    #df_cleaned = 
+    offers_infos_cleaning(df_raw)
+    #load_df_cleaned(df_cleaned, conn)
     
-    conn.close()
+    #conn.close()
 
 if __name__=='__main__':
     main()
