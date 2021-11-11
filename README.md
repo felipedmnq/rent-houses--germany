@@ -32,5 +32,7 @@ The third script uses the previous one (use the offer ids) to extract all main i
   <img width="1431" alt="Screen Shot 2021-11-10 at 21 22 05" src="https://user-images.githubusercontent.com/71295866/141187696-67002d2e-f1fb-409e-97de-e66726b4fddd.png">
 </p>
 
+As I said previously, it could be done in a much easier way, but the main goal here was to practice.
+
 From here we have the base data for further work.
 
