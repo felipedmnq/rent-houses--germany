@@ -2,7 +2,9 @@
 
 This solution was build to extract the needed information from the website (https://www.immonet.de/) and store it localy in a postgres database.
 
-
+<p align="center">
+  <img width="630" alt="Screen Shot 2021-11-11 at 17 46 57" src="https://user-images.githubusercontent.com/71295866/141341515-b883923e-9843-4572-84a2-00856fc22d9e.png">
+</p>
 
 
 The first step of the project was build the extration part of the data pipeline. Three python scripts were written to perform the task. 
@@ -37,7 +39,4 @@ All the information is extracted in a raw format, all the main information comes
   <img width="1431" alt="Screen Shot 2021-11-10 at 21 22 05" src="https://user-images.githubusercontent.com/71295866/141187696-67002d2e-f1fb-409e-97de-e66726b4fddd.png">
 </p>
 
-As I said previously, it could be done in a much easier way, but the main goal here was to practice the connection with the database, 
-load data into the database and extract data from the database using python.
-
-From here we have the base data for further work.
+ 
