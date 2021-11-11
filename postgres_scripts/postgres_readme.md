@@ -3,6 +3,8 @@
 This solution was build to extract the needed information from the website (https://www.immonet.de/) and store it localy in a postgres database.
 
 
+
+
 The first step of the project was build the extration part of the data pipeline. Three python scripts were written to perform the task. 
 It could be done in a simplier way, but the real intention here was to practice and try some new packeges using python to connect with a postgres database, 
 load data into the database eng get data from the database. 
