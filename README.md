@@ -9,9 +9,14 @@ The basis of the project is to extract information about rental offers in some G
   <img width="459" alt="main_dataflow" src="https://user-images.githubusercontent.com/71295866/141155451-a9b1dff0-3adf-448f-af5c-f54c1de21b62.png">
 </p>
 
-### 1st solution - Postgres connection.
+### 1st Solution - Postgres connection.
 
 [Extract and load into postgres](https://github.com/felipedmnq/rent-houses--germany/tree/master/postgres_scripts)
 
 
 [README](https://github.com/felipedmnq/rent-houses--germany/blob/master/postgres_scripts/postgres_readme.md)
+
+
+### 2nd Solution - Google Cloud
+
+[Extract and load into GCP](https://github.com/felipedmnq/rent-houses--germany/tree/master/GCP_scripts)
