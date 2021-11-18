@@ -62,7 +62,7 @@ def offers_infos_preprocess(df_raw, save=True):
         infos_dict['city'] = df_raw['city'][x]
 
         # preprocess the infos cell
-        b = df_raw['offer_infos'][x].replace('\\', '')
+        b = df_raw['script_infos'][x].replace('\\', '')
         b = b.replace('{', '').replace('}', '')[4:]
         b = b[:-1]
         b = b.split(',')
@@ -77,7 +77,7 @@ def offers_infos_preprocess(df_raw, save=True):
                     infos_dict['area_m2'] = float(i)
                 except:
                     infos_dict['area_m2'] = np.nan
-                    logger.debug(f'Offer {i} has no information about area.')
+                    logger.debug(f"Offer {i} has no information about area.")
             # if the offer is furnished or not
             if 'mobex' in i:
                 if 'true' in i:
@@ -198,7 +198,7 @@ def offers_infos_preprocess(df_raw, save=True):
                     
         # append the infos about the offer           
         df_list.append(infos_dict)
-        logger.info(f'Offer no. {i} cleaned.')
+        #logger.info(f'Offer no. {i} cleaned.')
         
     # create a new cleaned dataframe
     df_pp = pd.DataFrame(df_list)
