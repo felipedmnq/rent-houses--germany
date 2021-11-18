@@ -1,10 +1,10 @@
-'''Get the raw data from the DB, clean and organize it.
+'''Get raw data from data lake, preprocess it and save into data warehouse.
 
 This script gets the raw dataset with all rent offers in the predefinated cities
-in Germany, separate the meaningful information, clean it and organize it in 
-different columns.
+in Germany, separate the meaningful information, preprocess it and organizes in 
+separated columns columns.
 
-Returns a new dataframe read to be used.
+Save the new csv file as "all_offers_infos_pp.csv" into "de_rent_bkt"
 '''
     
 # imports
@@ -35,7 +35,8 @@ def offers_infos_preprocess(df_raw, save=True):
     Parameter:
     ----------
         df_raw: Dataframe to be cleaned
-        
+        save: save the dataframe into GCP Storage data warehouse
+            default: True        
     Return:
     -------
         Returns a new dataframe with the meaningful informations separated by columns
