@@ -107,7 +107,7 @@ def get_offers_infos(df_ids, save=True):
             for i in script_infos:
                 if 'targetingParams' in i.text:
                     c = i.text
-                    infos = re.findall('\{(.*?)\}', c)
+                    infos1 = re.findall('\{(.*?)\}', c)
                 
                 # get lat/lng
                 if 'initModalMap' in i.text:
@@ -117,10 +117,11 @@ def get_offers_infos(df_ids, save=True):
                     except:
                         lat_lng = np.nan
                         
-            #offer_infos = []
-            #for panel in panels_infos:
-            #    text = panel.text.replace('\n', '').replace('\t', '-')
-            #    offer_infos.append(text)
+            # get infos from other source
+            try:
+                panels_infos = soup.findAll('div', class_='row margin-top-18')
+            else:
+                panels_infos = np.nan
 
 
 
@@ -130,7 +131,8 @@ def get_offers_infos(df_ids, save=True):
                                'city_code': df_ids['city_code'][count],
                                'offer_type': df_ids['type'][count],
                                'lat_lng': lat_lng,
-                               'offer_infos': infos})
+                               'script_infos': infos,
+                               'html_infos': panels_infos})
             sleep(1)
             pbar.update(1)
             #print(count)
@@ -144,8 +146,10 @@ def get_offers_infos(df_ids, save=True):
     if save:
         if not os.path.exists('../data'):
             os.makedirs('../data')
-        now2 = datetime.now().strftime('%Y_%m_%d')
-        df_infos.to_csv(f'../data/df_infos_{now2}.csv', index=False)
+        output_dir = '../data/'
+        #now2 = datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
+        filename = f'all_offers_infos_raw.csv'
+        df_infos.to_csv(os.path.join(output_dir, filename), index=False)
         
     return df_infos
 
@@ -185,7 +189,8 @@ def load_offer_ids(df_infos, conn):
         city_code INTEGER,
         offer_type VARCHAR(50),
         lat_lng TEXT,
-        offer_infos TEXT)'''
+        scrip_infos TEXT
+        html_infos)'''
     try:
         cursor.execute(query2)
         conn.commit()
@@ -220,13 +225,14 @@ def load_offer_ids(df_infos, conn):
 
 def main():
     # connection to database
-    conn = connect(config())
+    #conn = connect(config())
     
-    df = get_data_from_db(conn)
+    #df = get_data_from_db(conn)
+    df = pd.read_csv('../data/all_offers_ids.csv')
     df_infos = get_offers_infos(df)
-    load_offer_ids(df_infos, conn)
+    #load_offer_ids(df_infos, conn)
     
-    conn.close()
+    #conn.close()
     
 if __name__=='__main__':
     main()

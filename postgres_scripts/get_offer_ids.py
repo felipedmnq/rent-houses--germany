@@ -71,7 +71,7 @@ def get_data_from_db(conn):
     
     return df
 
-def get_offer_ids(df, save=False):
+def get_offer_ids(df, save=True):
     '''Get all offer ids for each offer in each city
     
     Parameters:
@@ -138,8 +138,8 @@ def get_offer_ids(df, save=False):
         if not os.path.exists('../data'):
             os.makedirs('../data')
         output_dir = '../data/'
-        now2 = datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
-        filename = f'immonet_de_{now2}.csv'
+        #now2 = datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
+        filename = f'all_offers_ids.csv'
         df_ids.to_csv(os.path.join(output_dir, filename), index=False)
     
     return df_ids

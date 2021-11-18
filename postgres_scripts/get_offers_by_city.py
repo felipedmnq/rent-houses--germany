@@ -63,7 +63,7 @@ def connect(conf):
     
     return conn
 
-def get_offers_qtt():
+def get_offers_qtt(save=True):
     '''
     Get offers quantity by city and store it in a postgres DB.
     '''
@@ -114,7 +114,14 @@ def get_offers_qtt():
 
     # offers_by_page = len(soup.findAll('div', class_="col-xs-12 place-over-understitial sel-bg-gray-lighter"))    
     df_offers = pd.DataFrame(cities_offers)
-    #df_offers.to_csv(f'temp_data/total_offers_by_city_temp_file.csv', index=False)
+    
+    if save:
+        if not os.path.exists('../data'):
+            os.makedirs('../data')
+        output_dir = '../data/'
+        #now2 = datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
+        filename = f'offers_qtt_by_city.csv'
+        df_offers.to_csv(os.path.join(output_dir, filename), index=False)
     
     return df_offers
 
