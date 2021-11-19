@@ -21,7 +21,7 @@ The basis of the project is to extract information about rental offers in some G
 
 [Extract and load into GCP](https://github.com/felipedmnq/rent-houses--germany/tree/master/GCP_scripts)
 
-
+[README - in progress](https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_scripts/GCP_README.md)
 ### Data Analysis
 
 [EDA - In progress](https://github.com/felipedmnq/rent-houses--germany/blob/master/data_analysis/offers_EDA.ipynb)
