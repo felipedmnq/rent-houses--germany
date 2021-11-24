@@ -323,15 +323,14 @@ def load_df_cleaned(df_cleaned, conn):
 
 def main():
     # connection to database
-    #conn = connect(config())
+    conn = connect(config())
     
-    #df_raw = get_data_from_db(conn)
-    df_raw = pd.read_csv('../data/all_offers_infos_raw.csv')
-    #df_cleaned = 
-    offers_infos_cleaning(df_raw)
-    #load_df_cleaned(df_cleaned, conn)
+    df_raw = get_data_from_db(conn)
+    #df_raw = pd.read_csv('../data/all_offers_infos_raw.csv')
+    df_cleaned = offers_infos_cleaning(df_raw)
+    load_df_cleaned(df_cleaned, conn)
     
-    #conn.close()
+    conn.close()
 
 if __name__=='__main__':
     main()
