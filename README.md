@@ -12,14 +12,12 @@ The basis of the project is to extract information about rental offers in some G
 ### 1st Solution - Postgres connection.
 
 
-[GCP README](https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_pipeline/GCP_README.md)
+[README](https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_pipeline/GCP_README.md)
 
 
 ### 2nd Solution - Google Cloud
 
-[Extract and load into GCP](https://github.com/felipedmnq/rent-houses--germany/tree/master/GCP_scripts)
-
-[README - in progress](https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_scripts/GCP_README.md)
+[GCP README - in progress](https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_scripts/GCP_README.md)
 ### Data Analysis
 
 [EDA - In progress](https://github.com/felipedmnq/rent-houses--germany/blob/master/data_analysis/offers_EDA.ipynb)
