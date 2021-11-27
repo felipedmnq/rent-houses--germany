@@ -17,7 +17,7 @@ The basis of the project is to extract information about rental offers in some G
 
 ### 2nd Solution - Google Cloud
 
-[GCP README - in progress](https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_scripts/GCP_README.md)
+[GCP README - in progress](https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_pipeline/GCP_README.md)
 ### Data Analysis
 
 [EDA - In progress](https://github.com/felipedmnq/rent-houses--germany/blob/master/data_analysis/offers_EDA.ipynb)
