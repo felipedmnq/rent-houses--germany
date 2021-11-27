@@ -11,10 +11,8 @@ The basis of the project is to extract information about rental offers in some G
 
 ### 1st Solution - Postgres connection.
 
-[Extract and load into postgres](https://github.com/felipedmnq/rent-houses--germany/tree/master/postgres_scripts)
 
-
-[README](https://github.com/felipedmnq/rent-houses--germany/blob/master/postgres_scripts/postgres_readme.md)
+[GCP README](https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_pipeline/GCP_README.md)
 
 
 ### 2nd Solution - Google Cloud
