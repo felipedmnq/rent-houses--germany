@@ -36,7 +36,7 @@ def get_offers_qtt(save=True):
     for city, code in cities_dict.items():
         
         #logging.info(f'Getting offers in {city}...')
-        print(f'Getting offers in {city}...')
+        print(f"Getting offers in {city}...")
 
         total_offers = 0
 
