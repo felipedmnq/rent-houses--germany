@@ -3,7 +3,7 @@
 In this version of the Rent Houses Germany project the focus was to learn and get used to Google Cloud Platform tools. 
 
 <p align="center">
-  <img width="717" alt="gcp_pipeline" src="https://user-images.githubusercontent.com/71295866/142464782-d7af62c8-866c-4a31-98d8-a6ef20f23130.png">
+  <img width="717" alt="gcp_pipeline" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_pipeline/images/Screen%20Shot%202021-11-27%20at%2013.57.08.png?raw=true">
 </p>
 
 The data collection is separated in tree steps:
