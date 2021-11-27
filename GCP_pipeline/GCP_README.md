@@ -28,3 +28,6 @@ CSV file named "all_offers_infos_raw.csv" into Cloud Storage.
 <p align="center">
   <img width="1201" alt="data_studio_dashboard" src="https://user-images.githubusercontent.com/71295866/142464809-a0712333-49f6-4d51-9cb5-71eafd8fb0cf.png">
 </p>
+
+
+[German Rent Report - 27.11.21](https://datastudio.google.com/s/lqHHK1S2DRQ)
