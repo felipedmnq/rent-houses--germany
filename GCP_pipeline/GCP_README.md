@@ -26,7 +26,7 @@ CSV file named "all_offers_infos_raw.csv" into Cloud Storage.
 
 
 <p align="center">
-  <img width="1201" alt="data_studio_dashboard" src="https://user-images.githubusercontent.com/71295866/142464809-a0712333-49f6-4d51-9cb5-71eafd8fb0cf.png">
+  <img width="1201" alt="data_studio_dashboard" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_pipeline/images/Screen%20Shot%202021-11-27%20at%2010.30.34.png?raw=true">
 </p>
 
 
