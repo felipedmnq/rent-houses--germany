@@ -1,7 +1,7 @@
 # Rent Houses - Germany
 
 
-This is a student project with the sole purpose of practicing new tools and concepts. The initial idea is to build a complete ELT/ETL pipeline and display the data as information. There are no predefined tools, no specific architecture, just a student using the most recently learned tools (there is also the issue of time, always little time to work on the project). Sometimes it will be an ETL process, ELT or even a EL. 
+This iproject has the purpose of practicing new tools and concepts. The initial idea is to build a complete ELT/ETL pipeline and display the data as information. There are no predefined tools, no specific architecture, just a student using the most recently learned tools (there is also the issue of time, always little time to work on the project). Sometimes it will be an ETL process, ELT or even a EL. 
 
 The basis of the project is to extract information about rental offers in some German cities, store it, work with it and display it, as showed in the follow diagram.
 
