@@ -6,7 +6,7 @@
 
 ### Project:
 
-The goal of the project is to extract data about house rentals in Germany, store, process and analyze it using GCP tools. The main goal here is to practice and get used to the GCP environment.
+- The goal of the project is to extract data about house rentals in Germany, store, process and analyze it using GCP tools. The main goal here is to practice and get used to the GCP environment.
 
 **Main Tools:**
 
@@ -61,11 +61,13 @@ Source: https://www.immonet.de/
 
 - All the extractions steps are scheduled though a Crontab Job to run everyday at 0h.
 
-#### CROMJOB PICTURE
+<p align="center">
+  <img width="1000" alt="cronjob" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_pipeline/images/Screen%20Shot%202021-11-28%20at%2014.57.34.png?raw=true">
+</p>
 
 ### Data Preprocessing.
 
-As the last CSV file contains all the RAW information about each offer grouped in only two columns, a preprocessing step is needed. The preprocessor script gets the CSV file with the raw information from Cloud Storage, separates the data into the appropriate columns already performing some cleaning like excluding not needed characters. Again, the preprocessed CSV file is stored in Cloud Storage.
+- As the last CSV file contains all the RAW information about each offer grouped in only two columns, a preprocessing step is needed. The preprocessor script gets the CSV file with the raw information from Cloud Storage, separates the data into the appropriate columns already performing some cleaning like excluding not needed characters. Again, the preprocessed CSV file is stored in Cloud Storage.
 
 ```all_offers_infos_raw.csv```:
 
@@ -81,13 +83,25 @@ As the last CSV file contains all the RAW information about each offer grouped i
 
 ### Data Cleaning and Preparation.
 
-Here is used Cloud Dataprep to clean and prepare the data for further use. To transform the rent data into useble information first we need to clean and prepare it. Dataprep is a realy good tool where we can look inside the data and can perform all kind of filtering, removing and preparations. Dataprep gets the preprocessed csv file from Cloud Storage and runs a "recipe" tranforming the data to be analyzed. Dataprep saves the cleaned and final csv file both into Data Storage (a backup) and into a BigQuery warehouse.
-
-#### DATAPREP PICTURE
+- Here is used Cloud Dataprep to clean and prepare the data for further use. To transform the rent data into useble information first we need to clean and prepare it. Dataprep is a realy good tool where we can look inside the data and can perform all kind of filtering, removing and preparations. Dataprep gets the preprocessed csv file from Cloud Storage and runs a "recipe" tranforming the data to be analyzed. Dataprep saves the cleaned and final csv file both into Data Storage (a backup) and into a BigQuery warehouse.
 
 <p align="center">
+  <img width="1000" alt="dataprepJob" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_pipeline/images/Screen%20Shot%202021-11-28%20at%2015.00.32.png?raw=true">
+</p>
+
+- The Dataproc job was scheduled to run everyday 7 A.M and update the data source for the reports.
+ 
+### Data Analysis - Data Studio Report.
+
+- With the data cleaned and loaded into BigQuery it's time to display the information. The GCP tools used to display the data was Data Studio and Looker. First I used Data Studio to make a simple report summaring all the rent houses main informantion and schedule to send an e-mail with the updated report avery day at 8 A.M.
+
   <img width="1201" alt="data_studio_dashboard" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_pipeline/images/Screen%20Shot%202021-11-27%20at%2010.30.34.png?raw=true">
 </p>
 
 
 [German Rent Report - 27.11.21](https://datastudio.google.com/s/lqHHK1S2DRQ)
+
+### Data Analysis - Looker Dashboard.
+
+
+### Conclusion.
