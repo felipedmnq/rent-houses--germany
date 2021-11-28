@@ -12,7 +12,7 @@ The basis of the project is to extract information about rental offers in some G
 ### 1st Solution - Postgres connection.
 
 
-[README](https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_pipeline/GCP_README.md)
+[README](https://github.com/felipedmnq/rent-houses--germany/blob/master/postgres_scripts/PSQL_README.md)
 
 
 ### 2nd Solution - Google Cloud
