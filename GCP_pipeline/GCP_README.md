@@ -59,15 +59,31 @@ Source: https://www.immonet.de/
 
 - The first script is responsible to scrape the number of offers in each city and save the information as a CSV file in Cloud Storage. The second script gets the previous CSV file from Cloud Storage and uses it to scrape all ID's from each offers in each city and load the information back to Cloud Storage as a new CSV file. The third script gets the rent offer's ID info from Cloud Storage and perform a web-scraper to collect all information for each ID and save it back to Cloud Storage, again as a CSV file containing all raw infos about the offers.
 
+- All the extractions steps are scheduled though a Crontab Job to run everyday at 0h.
+
+#### CROMJOB PICTURE
+
 ### Data Preprocessing.
 
-As the last CSV file contains all the RAW information about each offer grouped in only two columns, a preprocessing step is needed. The preprocessor script gets the CSV file with the raw information from Cloud Storage, separates the data into the appropriate columns already performing some cleaning like excluding not needed characters.
+As the last CSV file contains all the RAW information about each offer grouped in only two columns, a preprocessing step is needed. The preprocessor script gets the CSV file with the raw information from Cloud Storage, separates the data into the appropriate columns already performing some cleaning like excluding not needed characters. Again, the preprocessed CSV file is stored in Cloud Storage.
 
 ```all_offers_infos_raw.csv```:
 
+<p align="center">
+  <img width="1000" alt="raw_infos" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_pipeline/images/Screen%20Shot%202021-11-28%20at%2013.12.36.png?raw=true">
+</p>
 
+```all_offers_infos_pp.csv```:
 
+<p align="center">
+  <img width="1000" alt="raw_infos" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_pipeline/images/Screen%20Shot%202021-11-28%20at%2013.13.52.png?raw=true">
+</p>
 
+### Data Cleaning and Preparation.
+
+Here is used Cloud Dataprep to clean and prepare the data for further use. To transform the rent data into useble information first we need to clean and prepare it. Dataprep is a realy good tool where we can look inside the data and can perform all kind of filtering, removing and preparations. Dataprep gets the preprocessed csv file from Cloud Storage and runs a "recipe" tranforming the data to be analyzed. Dataprep saves the cleaned and final csv file both into Data Storage (a backup) and into a BigQuery warehouse.
+
+#### DATAPREP PICTURE
 
 <p align="center">
   <img width="1201" alt="data_studio_dashboard" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/GCP_pipeline/images/Screen%20Shot%202021-11-27%20at%2010.30.34.png?raw=true">
