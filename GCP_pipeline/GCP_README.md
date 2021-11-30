@@ -103,5 +103,9 @@ Source: https://www.immonet.de/
 
 ### Data Analysis - Looker Dashboard.
 
+- I'm still working on it.
 
 ### Conclusion.
+
+- The tools available on the Google Cloud Platform are simply amazing. As in all Cloud platforms, the tools are available and are arranged in a way to make the user's life easier, it is really cool and very easy to build an entire ETL/ELT process using the available tools and it makes everything much easier and more agile. 
+The availability of the tools in one place and the easy integration between them makes the life of the Data Engineer, Data Scientist and Data Analyst and any developer much easier and more practical. For me, I loved being able to experiment with these tools (I'm still experimenting) and certainly the next steps will be to continue studying and learning cloud environments and in the future to seek certifications.
