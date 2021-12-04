@@ -49,11 +49,15 @@ As expected, this hypothesis is **FALSE**.
 
 As we can see in the chart below, as the area size increases, the rent average price increses as well and this is natural, places with bigger areas should have a bigger cost.
 
-![avg_rent_by_m2.png](attachment:5c65e739-dfec-4467-aa94-d7336f6bc8c8.png)
+<p align="center">
+  <img width="1431" alt="avg_rent_by_m2.png" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/charts/avg_rent_by_m2.png?raw=true">
+</p>
 
 But when we analyze the average price per m2 for each range of area, the data shows us that not necessarily the bigger places are more expensive, they have a bigger cost, but the most expensive places are the smallest ones, they have a much bigger cost by m2 than the medium to bigger places.
 
-![avg_m2_by_range_area.png](attachment:015aa6f1-4219-4b0e-8e22-5b80a0826d63.png)
+<p align="center">
+  <img width="1431" alt="avg_m2_by_range_area.png" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/charts/avg_m2_by_range_area.png?raw=true">
+</p>
 
 **H2. The more rooms, the more expensive.**
 
@@ -61,10 +65,15 @@ The situation here is similar than the previous and the hypotesys is aldo **FALS
 
 When we analyze the rent cost and the number of rooms, is natural that as bigger the number of room, the bigger the rent cost and the next chart shows us this. 
 
-![avg_rent_price_num_rooms.png](attachment:4d8de4a9-a487-4a33-8fb8-99fb65b404a7.png)
+<p align="center">
+  <img width="1431" alt="avg_rent_price_num_rooms.png" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/charts/avg_rent_price_num_rooms.png?raw=true">
+</p>
 
-But again, when we analyze the m2 price by number of rooms, we can clearly see that the price per m2 is much bigger for places with less number of rooms, in other words, the relative cost is much bigger in smaller places or places with less number of rooms.
+Again, when we analyze the m2 price by number of rooms, we can clearly see that the price per m2 is much bigger for places with less number of rooms, in other words, the relative cost is much bigger in smaller places or places with less number of rooms.
 
-![avg_m2_price_num_rooms.png](attachment:833de4b3-87ac-4506-868c-f9c1406a7f6a.png)
+<p align="center">
+  <img width="1431" alt="avg_m2_price_num_rooms.png" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/charts/avg_m2_price_num_rooms.png?raw=true">
+</p>
+
 
 
