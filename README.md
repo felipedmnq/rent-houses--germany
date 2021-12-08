@@ -87,7 +87,7 @@ The first step was to check the characteristics and distributions of rent price.
   <img width="1431" alt="rent_price_desc.png" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/charts/rent_price_desc.png?raw=true">
 </p>
 
-Here we can see the presence of some outliers and the positive skewness with a tail directed to higher prices and the scatter plot shows us the exactly distribution of the rent price.
+Here we can see the presence of some outliers, the positive skewness with a tail directed to higher prices and the scatter plot shows us the exactly distribution of the rent price.
 
 **H1. Offers with larger areas are more expensive.**
 
