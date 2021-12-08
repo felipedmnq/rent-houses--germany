@@ -41,7 +41,33 @@ All the information is extracted in a raw format, all the main information comes
 
 ## Data Analasysis
 
-### Hypotesis
+### Dataframe Description
+
+* **offer_id** - unique id for each offer.
+* **extraction_date** - extraction datetime.
+* **lat** - latitude.
+* **lng** - longitude.
+* **city** - city.
+* **area_m2** - area in squared meters.
+* **furnished** - whether is furnished or unfurnished.
+* **zip_code** - zip code.
+* **main_category** - main category of the property.
+* **rooms** - ho many rooms the property have.
+* **build_year** - year of construction of the property.
+* **state** - state.
+* **sub_category** - sub-category of the property. 
+* **balcony** - whether is has a balcony or not.
+* **heat_type** - which time of head system.
+* **offer_title** - the title of the property ad.
+* **kitchen** - whether it has a kitchen installed or not.
+* **rent_price** - rent price in Euros.
+* **garden** - whether it has a garden or not.
+
+### Desscriptive Analysis
+
+### Exploratory Data Analysis
+
+#### Hypotesis
 
 **H1. Offers with larger areas are more expensive.**
 
