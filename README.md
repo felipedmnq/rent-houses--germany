@@ -89,6 +89,14 @@ The first step was to check the characteristics and distributions of rent price.
 
 Here we can see the presence of some outliers, the positive skewness with a tail directed to higher prices and the scatter plot shows us the exactly distribution of the rent price.
 
+The next chart shows us The rent price distribution for each city.
+
+<p align="center">
+  <img width="1431" alt="rent_price_desc.png" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/images/boxplot_rent_by_city.png?raw=true">
+</p>
+
+### Some Hypothesis
+
 **H1. Offers with larger areas are more expensive.**
 
 As expected, this hypothesis is **FALSE**.
