@@ -129,5 +129,17 @@ Again, when we analyze the m2 price by number of rooms, we can clearly see that 
   <img width="1431" alt="avg_m2_price_num_rooms.png" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/charts/avg_m2_price_num_rooms.png?raw=true">
 </p>
 
+Wordcloud text here
+
+<p align="center">
+  <img width="1431" alt="avg_m2_price_num_rooms.png" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/charts/wordcloud.png?raw=true">
+</p>
+
+
+Final map here
+
+<p align="center">
+  <img width="1431" alt="avg_m2_price_num_rooms.png" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/images/2021-12-16%2005.50.23.gif?raw=true">
+</p>
 
 
