@@ -2,7 +2,7 @@
 
 from configparser import ConfigParser
  
-def config(filename='database.ini', section='postgresql'):
+  
     '''Connects with local postgresql database
     
     Parameters:
