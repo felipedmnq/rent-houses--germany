@@ -129,17 +129,62 @@ Again, when we analyze the m2 price by number of rooms, we can clearly see that 
   <img width="1431" alt="avg_m2_price_num_rooms.png" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/charts/avg_m2_price_num_rooms.png?raw=true">
 </p>
 
-Wordcloud text here
+In order to have an overview about the offer_title column and check what are the main words that appear there, was build a "word cloud" image, displayed below:
 
 <p align="center">
   <img width="1431" alt="avg_m2_price_num_rooms.png" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/charts/wordcloud.png?raw=true">
 </p>
 
 
-Final map here
+To display all the offers in a map was used folium library, where we can see the distribution though Germany in a aggregated format. Each point displays the offer id, type, rent price and area.
 
 <p align="center">
   <img width="1431" alt="avg_m2_price_num_rooms.png" src="https://github.com/felipedmnq/rent-houses--germany/blob/master/images/2021-12-16%2005.50.23.gif?raw=true">
 </p>
 
+### Conclusion
+
+This project had the main goal to practice the usage of tools to perform a full ETL process. It was used Python and BeautfulSoup library to performa web scraper and extrated the needed data from a website, pysicopg library to load the extracted data into a Postgres database and to extract data from it, configparser library to have access to the database hiding password and critical information, logging library to save the logs, Pandas and regular expressions to transform and cleam the data and Seaborn, Matplotlib, WordCloud and Folium to analyse and display the data into charts and maps.
+
+<table align="center">
+     <tbody>
+       <tr valign="top">
+          <td width="25%" align="center">
+            <span>Python</span><br><br>
+            <img height="64px" src="https://cdn.svgporn.com/logos/python.svg">
+          </td>
+          <td width="25%" align="center">
+            <span>BeautifulSoup</span><br><br>
+            <img height="64px" src="https://hwk0702.github.io/img/bs.png">
+          </td>
+          <td width="25%" align="center">
+            <span>Pandas</span><br><br>
+            <img height="64px" src="https://pandas.pydata.org/static/img/pandas.svg">
+          </td>
+          <td width="25%" align="center">
+            <span>Psycopg2</span><br><br>
+            <img height="64px" src="https://avatars.githubusercontent.com/u/2947270?s=280&v=4">
+          </td>
+        </tr>
+        <tr valign="top">
+           <td width="25%" align="center">
+            <span>RegEx</span><br><br>
+            <img height="64px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiY58VtW3fROlv9sgJF8Ydj0uFpyRZrUNdaEUVHgtKl3ZuiompgnpqsTSarQTdYHnkMQA&usqp=CAU">
+          </td>
+          <td width="25%" align="center">
+            <span>Seaborn</span><br><br>
+            <img height="64px" src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg">
+          </td>
+          <td width="25%" align="center">
+            <span>Folium</span><br><br>
+            <img height="64px" src="https://cdn-images-1.medium.com/max/1000/1*-7Ro7fO__wwWz0iL9tucHQ.png">
+          </td>
+          <td width="25%" align="center">
+            <span>WordCloud</span><br><br>
+            <img height="64px" src="https://image.spreadshirtmedia.com/image-server/v1/mp/compositions/T210A2MPA3176PT17X31Y19D1012088179FS3800/views/1,width=550,height=550,appearanceId=2,backgroundColor=000000,noPt=true/python-logo-wordcloud-shirt-for-programmers-mens-t-shirt.jpg">
+          </td>
+        <tr valign="top">
+        </tr>
+      </tbody>
+    </table>
 
