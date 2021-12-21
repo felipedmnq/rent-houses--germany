@@ -1,3 +1,5 @@
+This project has the coal to undertand and practice tools to load data into Postgres database and to extract data from Postgrees using python.
+
 ## Postgres Database.
 
 This solution was build to extract the needed information from a website (https://www.immonet.de/) and store it localy in a postgres database.
